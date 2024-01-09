@@ -70,9 +70,9 @@ class TestimonialController extends Controller
 
             $data->save();
 
-            return redirect()->route('review.index')->with('msg', 'New testimonial entry created');
+            return redirect()->route(('testimonial.index'))->with('msg', 'New testimonial entry created');
         }        
-        return redirect()->route('review.index')->with('msg', "Can't create testimonial entry" );
+        return redirect()->route('testimonial.index')->with('msg', "Can't create testimonial entry" );
     }
 
     /**
